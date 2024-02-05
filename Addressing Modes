@@ -1,0 +1,13 @@
+.global _start
+_start:
+	LDR R0, =list
+	LDR R1, [R0, #4] 			// Pre Indexing
+	LDR R2, [R0], #4            // Post Indexing
+	LDR R3, [R0, #4]!			// Pre index with update
+	MOV R4, #9					// Immediate addressing
+	MOV R5, R4					// Register direct addressing
+	
+.data
+list:
+	.word 1,2,3,4,5,6,7
+	
