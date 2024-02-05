@@ -1,0 +1,15 @@
+.global _start
+_start:
+	MOV R0, #3
+	MOV R1, #7
+	ADD R2, R1, R0   //Addition R2=R1+R0
+	SUB R3, R0, R1	 // Subraction R3=R0-R1
+	RSB R4, R0, R1   // Reverse subraction R4=R1-R0
+	MUL R5, R1, R0   // Multiplication R5=R1*R0
+	
+	/* Assigning value for carry demo */
+	
+	MOV R6, #0XFFFFFFFF
+	MOV R7, #3
+	ADDS R8, R6, R7       // Indicates carry value in CPSR as C 
+	ADC R9, R6, R7        // Indicates carry value in CPSR as C and add with R6 & R7
