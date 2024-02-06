@@ -1,0 +1,9 @@
+.global _start
+_start:
+	MOV R0, #10
+	MOV R1, #8
+	AND R2, R0, R1   // R2 = R0 AND R1
+	ORR R3, R0, R1	 // R3 = R0 OR R1
+	EOR R4, R0, R1	 // R4 = R0 EXOR R1
+	BIC R5, R0, R1   // Bit Clear R5 = R0 AND NOT R1
+	MVN R6, R1   	   // Move negated value of R1, R6 = -(R1+1)
