@@ -1,11 +1,11 @@
 .global _start
 _start:
 	LDR R0, =list
-	LDR R1, [R0, #4] 			// Pre Indexing
+	LDR R1, [R0, #4] 	    // Pre Indexing
 	LDR R2, [R0], #4            // Post Indexing
-	LDR R3, [R0, #4]!			// Pre index with update
-	MOV R4, #9					// Immediate addressing
-	MOV R5, R4					// Register direct addressing
+	LDR R3, [R0, #4]!	    // Pre index with update
+	MOV R4, #9		    // Immediate addressing, allowed value 0 t0 255
+	MOV R5, R4		    // Register direct addressing
 	
 .data
 list:
