@@ -1,0 +1,8 @@
+.global _start
+_start:
+	MOV R0, #10
+	MOV R1, #10
+	CMP R1, R0    // Set cc on R1-R0
+	CMN R1, R0    // Set cc on R1+R0. It is similar to ADS but the result value is discarded
+	TST R0, R1	  // Set cc on R1 AND R2
+	TEQ R0, R1	  // Set cc on R1 XOR R2
