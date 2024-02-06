@@ -1,0 +1,9 @@
+.global _start
+_start:
+	MOV R0, #10
+	MOV R1, R0, LSL #1   // Logical Shift Left -> Multiplying 2^n. Here n=1.
+	MOV R2, R0, LSR #1   // Logical Shift Right -> Dividing 2^n. Here n=1. Instead of division operation, we do lsr.
+	LSL R0, #2           // R0 * 2^2
+	LSR R0, #2           // R0 * 2^-2
+	MOV R3, #11          // 11 -> 0000 0000 0000 0000 0000 0000 0000 1011
+	MOV R4, R3, ROR #4   // 2952790016 -> 1011 0000 0000 0000 0000 0000 0000 0000, mention panuna number of values ah apdiye munadi kondu vanthudum
