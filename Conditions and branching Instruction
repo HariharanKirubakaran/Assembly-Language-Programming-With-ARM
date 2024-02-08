@@ -1,0 +1,13 @@
+.global _start
+_start:
+	MOV R0, #3
+	MOV R1, #5
+	CMP R0, R1
+	BGT greater      // If R0  is greater, execution will moves to greater. Flow will also goes to greater when value is lesser also. 
+	BAL default      // Therefore we are using Branch Always (BAL) to move the execution flow to default line, by skipping greater portion.
+greater:           // It is similar to greater values also. After executing greater, flow goes to default. So we've to redirect the flow somewhere.
+	MOV R2, R0
+default:
+	MOV R2, R1
+
+	
